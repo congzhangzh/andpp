@@ -22,7 +22,10 @@ sudo aptitude install python3-fire python3-scapy
 Run the script from the command line, providing necessary parameters:
 
 ```bash
-python andpp.py outer_iface outer_ether_addr router_ether_addr proxy_net_prefix
+sudo python3 andpp.py outer_iface outer_ether_addr router_ether_addr proxy_net_prefix
+
+# you can add to your cron table by crontab -e like:
+# @reboot sleep 120; sudo python3 ~/projects/andpp/andpp.py eth0 00:11:31:f1:01:71 44:22:22:33:3a:00 2a03:dddd:a11f:
 ```
 
 ## Parameters
