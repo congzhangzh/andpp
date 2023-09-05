@@ -1,6 +1,10 @@
 # Another NDP Proxy(andpp)
 Turn a none routeable ipv6 subnet to routeable
 
+This will be a replacement for https://github.com/google/ndprbrd and https://github.com/DanielAdolfsson/ndppd
+
+Hope you guys can give it a try!
+
 # Requirements
 1. Python 3.x
 2. Scapy
