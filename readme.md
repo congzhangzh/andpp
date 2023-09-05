@@ -6,12 +6,14 @@ Turn a none routeable ipv6 subnet to routeable
 2. Scapy
 3. Google Fire
 
-## For some local env like venv or conda
+## For conda
 ```bash
+conda create -n andpp python
+conda activate andpp
 pip install fire scapy
 ```
 
-## For debian os
+## For Debian
 ```bash
 sudo aptitude install python3-fire python3-scapy
 ```
@@ -20,18 +22,34 @@ sudo aptitude install python3-fire python3-scapy
 Run the script from the command line, providing necessary parameters:
 
 ```bash
-python andpp.py --outer_iface=ensx --outer_ether_addr=xx:xx:xx:xx:xx:xx --router_ether_addr=xx:xx:xx:xx:xx:xx --proxy_net_prefix=xxxx:xxx:xxx:xxx:
+python andpp.py outer_iface outer_ether_addr router_ether_addr proxy_net_prefix
 ```
 
 ## Parameters
---outer_iface: 
-    The outer interface to use (e.g., ens11 or eth0).
+outer_iface:
 
---outer_ether_addr: 
+    The outer interface to use (e.g., ens11 or eth0). get from:
+```bash
+    ip link
+```
+
+outer_ether_addr:
+
     The Ethernet address for the outer interface (e.g., xx:xx:xx:xx:xx:xx).
+```bash
+    ip link
+```
 
---router_ether_addr: 
+router_ether_addr: 
+
     The Ethernet address for the router (e.g., xx:xx:xx:xx:xx:xx).
 
---proxy_net_prefix: 
-    The proxy network prefix (e.g., xxxx:xxx:xxx:xxx:).
+```bash
+    ip -6 neighbor
+```
+
+proxy_net_prefix: 
+
+    The proxy network prefix (e.g., xxxx:xxx:xxx:xxx:). 
+    
+    This should get from you ISP!
