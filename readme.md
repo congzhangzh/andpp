@@ -48,7 +48,7 @@ router_ether_addr:
     The Ethernet address for the router (e.g., xx:xx:xx:xx:xx:xx).
 
 ```bash
-    ip -6 neighbor
+    sudo ip -6 nei|grep router
 ```
 
 proxy_net_prefix: 
