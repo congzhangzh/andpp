@@ -16,7 +16,7 @@ def is_expected_nd_so(x, expected_prefix, router_ether_addr):
     return x[ICMPv6ND_NS].tgt.startswith(expected_prefix)
 
 def is_expected_nd_ad(x, expected_prefix, router_ether_addr):
-    #return x[Ether].dst==router_ether_addr and x[ICMPv6ND_NA].tgt.startswith(expected_prefix)
+    # return x[Ether].dst==router_ether_addr and x[ICMPv6ND_NA].tgt.startswith(expected_prefix)
     return x[ICMPv6ND_NA].tgt.startswith(expected_prefix)
 
 def main(outer_iface, outer_ether_addr, router_ether_addr, proxy_net_prefix):
